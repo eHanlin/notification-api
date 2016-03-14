@@ -1,0 +1,27 @@
+<table><tbody>
+    <tr><td>姓名 : </td><td>${name}</td></tr>
+    <tr><td>email : </td><td>${email}</td></tr>
+    <tr><td>電話 : </td><td>${tel}</td></tr>
+    <tr><td>產品 : </td><td>${productName}</td></tr>
+    <tr><td>測驗項目 : </td><td>${sourceName}</td></tr>
+    <tr><td>科目 : </td><td>${subjectName}</td></tr>
+    <tr><td>成績 : </td><td>${score}</td></tr>
+    <tr><td>群體正答率 : </td><td>${questionRightRate}</td></tr>
+    <tr><td>成績單號 : </td><td>${paperId}&nbsp;<a href="http://www.ehanlin.com.tw/unit/${source}/report.html?id=${paperId}">檢視成績單</a></td></tr>
+    <tr><td>成績單題號 : </td><td>${qNum}</td></tr>
+    <tr>
+        <td>系統題號 : </td>
+        <td>${questionId}&nbsp;
+            <a href="http://mgmt.ehanlin.com.tw/ehanlinmgmt/search.html">試題搜尋</a>&nbsp;
+            <a href="http://mgmt.ehanlin.com.tw/ehanlinmgmt/viewexam4search.html?id=${questionId}">檢視後台</a>&nbsp;
+            <a href="http://mgmt.ehanlin.com.tw/ehanlinmgmt/comparison4search.html?id=${questionId}">轉檔比對</a>&nbsp;
+            <a href="http://mgmt.ehanlin.com.tw/ehanlinmgmt/examdownload/dlexamsbyexamid.do?id=${questionId}">下載五欄</a>&nbsp;
+            <a href="http://mgmt.ehanlin.com.tw/ehanlinmgmt/convertstatus.html">上傳</a>&nbsp;
+            <a href="http://www.ehanlin.com.tw/admin/question.html?id=${questionId}">檢視前台</a></td>
+    </tr>
+    <tr><td>題目類型 : </td><td>${genreName}</td></tr>
+    <tr><td>子題編號 : </td><td>${indexOfTrunk}</td></tr>
+    <tr><td>疑義種類 : </td><td>${typeName}</td></tr>
+    <tr><td>疑義建議 : </td><td>${content}</td></tr>
+    <tr><td>發送時間 : </td><td>${date}</td></tr>
+</tbody></table>

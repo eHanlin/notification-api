@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+    }
+}
+
+apply plugin: "java"
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+group = "com.ehanlin"
+version = "0.0.2"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "javax.mail:javax.mail-api:1.5.0"
+    runtime "com.sun.mail:javax.mail:1.5.0"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+bintray {
+    user = bintray_user
+    key = bintray_api_key
+
+    publications = ['mavenJava']
+    publish = true
+    pkg {
+        repo = "maven"
+        name = "notification-api"
+        userOrg = "ehanlin"
+        desc = "eHanlin notification api"
+        vcsUrl = "https://github.com/eHanlin/notification-api.git"
+        licenses = ['Apache-2.0']
+        publicDownloadNumbers = true
+    }
+}
+

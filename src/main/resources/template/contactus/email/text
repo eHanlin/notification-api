@@ -1,0 +1,7 @@
+<table><tbody>
+	<tr><td>姓名 : </td><td>${name}</td></tr>
+	<tr><td>電話 : </td><td>${tel}</td></tr>
+	<tr><td>信箱 : </td><td>${email}</td></tr>
+	<tr><td>項目 : </td><td>${option}</td></tr>
+	<tr><td>內容 : </td><td>${content}</td></tr>
+</tbody></table>
